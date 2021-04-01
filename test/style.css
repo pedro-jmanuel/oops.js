@@ -1,0 +1,10 @@
+input,textarea,select,button,p,h1{
+    display: grid;
+    margin: 20px;
+}
+
+.container{
+    margin: 0 auto;
+    width: 50%;
+    border: 1px solid black;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oops.js | test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <form action="" method="post">
+
+        <input type="text"     id="_text"       name=""  data-oops>
+        <input type="file"     id="_file"       name=""  data-oops>
+        <input type="hidden"   id="_hidden"     name=""  data-oops>
+        <input type="checkbox" id="_checkbox_1" name=""  data-oops>
+        <input type="checkbox" id="_checkbox_2" name=""  data-oops>
+        <input type="color"    id="_color"      name=""  data-oops>
+        <input type="number"   id="_number"     name=""  data-oops>
+        <input type="url"      id="_url"        name=""  data-oops>
+        <input type="radio"    id="_radio_1"    name="r" data-oops>
+        <input type="radio"    id="_radio_2"    name="r" data-oops>
+        <input type="range"    id="_range"      name=""  data-oops>
+        <input type="search"   id="_search"     name=""  data-oops>
+        <input type="password" id="_password"   name=""  data-oops>
+        <textarea  cols="30"   id="_textarea"   name=""  rows="10" data-oops></textarea>
+      
+        <p data-oops>Hello p </p>
+        <h1 data-oops>Hello h1</h1>
+
+        <select name="s[]" id="" data-oops>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select>
+
+        
+        <button type="submit" id="btn_submit">Submit</button>
+        <button type="reset"  id="btn_reset">Reset</button>
+    </form>
+</div>
+     
+<script src="oops.js"></script>
+
+<script>
+   
+var config = {
+    storage           : "localStorage",
+    sessionStorageKey : "my_ss_key",
+    localStorageKey   : "my_ls_key" 
+};
+
+var fs = new Oops(config);
+
+startTime = performance.now();
+
+fs.start();
+
+endTime = performance.now();
+
+console.log("Elapsed Time : " + ( endTime - startTime ) );
+
+var el = document.getElementById("btn_reset");
+
+el.addEventListener("click",function(){
+
+    fs.clear();
+
+});
+
+</script>
+
+
+</body>
+</html>
