@@ -16,7 +16,7 @@ Copy the **oops.min.js** located in the directory **src/** for your development 
 Use the tag `<script>` with the **src** attribute pointing to **oops.min.js**
 
 ```js
-<script src script="oops.min.js"></script>
+<script src="oops.min.js"></script>
 ```
 
 # Example 1
@@ -30,7 +30,7 @@ Use the tag `<script>` with the **src** attribute pointing to **oops.min.js**
     <button type="reset" id="_reset">Reset</button>
 </form>
     
-<script src script="oops.min.js"></script>
+<script src="oops.min.js"></script>
 
 <script>
     
@@ -59,7 +59,7 @@ Now the fields that have the `data-oops` attribute have not lost their data if :
         <button type="reset" id="_reset">Reset</button>
     </form>
     
-    <s src script="oops.min.js"></script>
+    <s src="oops.min.js"></script>
     
     <script>
         
@@ -81,7 +81,7 @@ Now the fields that have the `data-oops` attribute have not lost their data if :
     </script>
 ```
 
-In this example we add more code, to delete the saved data when the form is submitted or when we decide to clear the filled fields, using the `.clear()` method ; despoable in the object of the `new Oops()` instance;
+In this example we add more code, to delete the saved data when the form is submitted or when we decide to clear the filled fields, using the `.clear()` method , despoable in the object of the `new Oops()` instance;
 
 # Going deeper
 
@@ -97,7 +97,7 @@ var ps = new Oops (config);
 
 **Key** property
 
-The value of the key to be used by. Web Storage API.
+The value of the key to be used by. [Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
 
 
 > By default the key used is **oops_key**
@@ -116,6 +116,8 @@ The Web Storage engine to use, which can be **localStorage** or **sessionStorage
 
 
 > By default the mechanism used is **localStorage**
+
+
 
 # Available methods
 
@@ -138,7 +140,7 @@ The Web Storage engine to use, which can be **localStorage** or **sessionStorage
 # Contributing
 
 Commits must be verb-based, using the following pattern:
-* Rectifying ...
+* Fixing ...
 * Adding ...
 * Changing ...
 * Removing ...
