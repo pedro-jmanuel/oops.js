@@ -1,3 +1,6 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/pedro-jmanuel/oops)
+![GitHub language count](https://img.shields.io/github/languages/count/pedro-jmanuel/oops)
+
 # Oops.js
 
 Library to prevent loss of form data in the following situations:
