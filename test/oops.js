@@ -1,6 +1,7 @@
 /* 
 ------------------------------------------
   Oops.js, By : Pedro José Manuel, 2021
+  www.github.com/pedro-jmanuel/oops
 ------------------------------------------
 */
 
@@ -49,7 +50,7 @@ function Oops(configuration){
         },
         
         //Function that detects whether localStorage is both supported and available:
-        
+        // Read more, https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
         storageAvailable: function(type) {
             var storage;
             try {
