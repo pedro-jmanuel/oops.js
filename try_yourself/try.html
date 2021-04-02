@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Try yourself</title>
+</head>
+<body>
+  
+
+    <form action="" class="form-sty">
+        <input  type="text"  placeholder="Your username" data-oops>
+        <input  type="url"   placeholder="base url" data-oops>
+        <input  type="email" placeholder="Your email">
+        <button type="submit"id="_submit">Submit</button>
+        <button type="reset" id="_reset">Reset</button>
+    </form>
+    
+    <script src="oops.min.js"></script>
+    
+    <script>
+        
+        var ps = new Oops();
+        
+        ps.start();
+        
+        var btn_s = document.getElementById("_submit");
+        var btn_r = document.getElementById("_reset");
+
+        btn_s.addEventListener("click",function(){
+            ps.clear();
+        });
+
+        btn_r.addEventListener("click",function(){
+            ps.clear();
+        });
+
+
+    </script>
+
+</body>
+</html>

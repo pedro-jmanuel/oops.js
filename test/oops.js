@@ -10,9 +10,8 @@ function Oops(configuration){
 
     var variables = {
         defaultConfig : {
-            storage          : "localStorage",
-            localStorageKey  : "oops_ls",
-            sessionStorageKey: "oops_ss"
+            storage : "localStorage",
+            key     : "oops_key"
         },
         config : {}
     };
@@ -77,19 +76,19 @@ function Oops(configuration){
         },
         storageSetItems: function(items){
             switch(variables.config.storage){
-                case "localStorage"  : localStorage.setItem(variables.config.localStorageKey,JSON.stringify(items));break;
-                case "sessionStorage": sessionStorage.setItem(variables.config.sessionStorageKey,JSON.stringify(items));break;
+                case "localStorage"  : localStorage.setItem(variables.config.key,JSON.stringify(items));break;
+                case "sessionStorage": sessionStorage.setItem(variables.config.key,JSON.stringify(items));break;
             }
         },
         storageGetItems:  function(){
             switch(variables.config.storage){
-                case "localStorage"  :return JSON.parse(localStorage.getItem(variables.config.localStorageKey));
-                case "sessionStorage":return JSON.parse(sessionStorage.getItem(variables.config.sessionStorageKey));    
+                case "localStorage"  :return JSON.parse(localStorage.getItem(variables.config.key));
+                case "sessionStorage":return JSON.parse(sessionStorage.getItem(variables.config.key));    
             }
         },
         isset: function(){
-            return (methods.isDefined(sessionStorage.getItem(variables.config.sessionStorageKey)) ||
-                    methods.isDefined(localStorage.getItem(variables.config.localStorageKey)));
+            return (methods.isDefined(sessionStorage.getItem(variables.config.key)) ||
+                    methods.isDefined(localStorage.getItem(variables.config.key)));
         },
         prepare: function (elements){
 
@@ -184,8 +183,8 @@ function Oops(configuration){
 
     this.clear = function(){
         switch(variables.config.storage){
-            case "localStorage"  :localStorage.removeItem(variables.config.localStorageKey);break;
-            case "sessionStorage":sessionStorage.removeItem(variables.config.sessionStorageKey);break;    
+            case "localStorage"  :localStorage.removeItem(variables.config.key);break;
+            case "sessionStorage":sessionStorage.removeItem(variables.config.key);break;    
         }
     };
 }
