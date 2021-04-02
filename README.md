@@ -125,7 +125,7 @@ The Web Storage engine to use, which can be **localStorage** or **sessionStorage
 
 # Authors
 
-* [Pedro Manuel](www.linkedin.com/in/pedro-jmanuel) 
+* [Pedro Manuel](https://www.linkedin.com/in/pedro-jmanuel) 
 
 # Built with
 
