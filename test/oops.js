@@ -108,6 +108,19 @@ function Oops(configuration){
             */
             return elValues;
        },
+       noError: function(stg){
+            if(stg == "localStorage" || stg == "sessionStorage" ){
+                if(methods.storageAvailable(stg)){
+                   return true;
+                }else{
+                    console.warn("oops.js warn: "+ stg + " is not available.");
+                    return false;
+                } 
+            }else{
+                console.error("oops.js error: The \"storage\" property can only be \"localStorage\" or \"sessionStorage\", check your configuration parameter.");
+                return false;
+            }
+       },
         track: function(){
             
             var elements = document.querySelectorAll("[data-oops]");
@@ -164,27 +177,23 @@ function Oops(configuration){
 
     this.start = function(){
         stg = variables.config.storage;
-
-        if(stg == "localStorage" || stg == "sessionStorage" ){
-           if(methods.storageAvailable(stg)){
-                if(methods.isset()){    
-                    methods.fill();
-                    methods.track();
-                }else{
-                    methods.track();
-                }
-           }else{
-                console.warn("oops.js warn: "+ stg + " is not available.");
-           } 
-        }else{
-            console.error("oops.js error: The \"storage\" property can only be \"localStorage\" or \"sessionStorage\", check your configuration parameter.");
+        if(methods.noError(stg)){
+            if(methods.isset()){    
+                methods.fill();
+                methods.track();
+            }else{
+                methods.track();
+            }
         }
     };
 
     this.clear = function(){
-        switch(variables.config.storage){
-            case "localStorage"  :localStorage.removeItem(variables.config.key);break;
-            case "sessionStorage":sessionStorage.removeItem(variables.config.key);break;    
+        stg = variables.config.storage;
+        if(methods.noError(stg)){
+            switch(variables.config.storage){
+                case "localStorage"  :localStorage.removeItem(variables.config.key);break;
+                case "sessionStorage":sessionStorage.removeItem(variables.config.key);break;    
+            }
         }
     };
 }
