@@ -127,6 +127,9 @@ The Web Storage engine to use, which can be **localStorage** or **sessionStorage
 `.start();` Initializes the tracker.
 
 `.clear();` Clears the stored data.
+# Security
+
+> Be careful when using the `data-oops` attribute in fields where sensitive data will be inserted, such as password. To "oops" keep your data in the form it stores that data in the browser, and can be easily accessed.
 
 # Authors
 
