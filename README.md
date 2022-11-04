@@ -48,7 +48,7 @@ We define the fields that we want your data to be tracked and saved by **oops.js
 
 We created an instance `var ps = new Oops(); `and initialize the tracker with `ps.start();`.
 
-😃 and ready!
+😃 and it's Done!
 
 Now the fields that have the `data-oops` attribute have not lost their data if : The page is updated, the browser tab is closed, or the browser is closed.
 # Example 2
