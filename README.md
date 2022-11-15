@@ -145,4 +145,8 @@ The Web Storage engine to use, which can be **localStorage** or **sessionStorage
 
 # Contributing
 
-Try to use commits with [conventional messages](https://www.conventionalcommits.org/en/v1.0.0/#summary) 
+Try to use commits with [conventional messages](https://www.conventionalcommits.org/en/v1.0.0/#summary)
+
+# Buy Me A Coffee
+
+<a align="center" href="https://www.buymeacoffee.com/pedro.jmanuel" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
